@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="6Vv-fp-RiJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRh-BA-Gsr">
+                                <rect key="frame" x="209" y="20" width="182" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="IDF-fj-zrW"/>
+                                    <constraint firstAttribute="width" constant="182" id="sXH-au-fEe"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Today Weather">
+                                        <attributes>
+                                            <color key="NSColor" red="0.32941177487373352" green="0.074509806931018829" blue="0.16470588743686676" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="25" name="Avenir-Book"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" red="0.87843143939971924" green="0.70980393886566162" blue="0.92549026012420654" alpha="1" colorSpace="deviceRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLz-U7-A4W">
+                                <rect key="frame" x="217" y="131" width="166" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="EFJ-k4-Vb0"/>
+                                    <constraint firstAttribute="width" constant="166" id="R0J-nC-ugT"/>
+                                </constraints>
+                                <state key="normal" title="What's the weather?"/>
+                                <connections>
+                                    <action selector="findWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hRE-73-2JF"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. Melbourne, Brisbane" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tjp-Gf-uL2">
+                                <rect key="frame" x="171" y="79" width="259" height="30"/>
+                                <color key="backgroundColor" red="0.41176474094390869" green="0.086274512112140656" blue="0.17647059261798859" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="259" id="cWU-Nh-ueB"/>
+                                    <constraint firstAttribute="height" constant="30" id="niz-se-Nm5"/>
+                                </constraints>
+                                <color key="textColor" red="0.90588241815567017" green="0.97254908084869385" blue="0.96078437566757202" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fT-ID-i8e">
+                                <rect key="frame" x="171" y="225" width="259" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="191" id="60N-yY-d6U"/>
+                                    <constraint firstAttribute="width" constant="259" id="I3y-uV-IRH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.93725496530532837" green="0.92549026012420654" blue="0.73725491762161255" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6fT-ID-i8e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1pj-gB-Kg0"/>
+                            <constraint firstItem="6Vv-fp-RiJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5Pc-l9-xng"/>
+                            <constraint firstItem="MRh-BA-Gsr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6xH-ag-ITc"/>
+                            <constraint firstItem="fLz-U7-A4W" firstAttribute="top" secondItem="tjp-Gf-uL2" secondAttribute="bottom" constant="22" id="8FG-NJ-hhJ"/>
+                            <constraint firstItem="6Vv-fp-RiJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Mrw-C9-wT3"/>
+                            <constraint firstItem="6fT-ID-i8e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PAa-0i-Q3i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Vv-fp-RiJ" secondAttribute="trailing" constant="-20" id="SZm-nN-OK6"/>
+                            <constraint firstItem="tjp-Gf-uL2" firstAttribute="top" secondItem="MRh-BA-Gsr" secondAttribute="bottom" constant="24" id="SmH-1v-vtr"/>
+                            <constraint firstItem="6fT-ID-i8e" firstAttribute="top" secondItem="fLz-U7-A4W" secondAttribute="bottom" constant="60" id="aqS-ME-Qiv"/>
+                            <constraint firstItem="fLz-U7-A4W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d5F-GJ-QYk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Vv-fp-RiJ" secondAttribute="bottom" id="gR2-tX-syp"/>
+                            <constraint firstItem="MRh-BA-Gsr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lDu-Oo-hMS"/>
+                            <constraint firstItem="tjp-Gf-uL2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zOr-h4-cSd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="city" destination="tjp-Gf-uL2" id="QvK-Bk-Qu2"/>
+                        <outlet property="result" destination="6fT-ID-i8e" id="a1G-c3-mZH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="308"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sky.jpeg" width="927" height="779"/>
+    </resources>
+</document>
